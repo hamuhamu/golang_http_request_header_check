@@ -6,10 +6,11 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<b>Hello, World</b>")
+	var v string = r.FormValue("hoge")
+	fmt.Fprintf(w, "<b>Hello, World :" + v + "</b>")
 }
 
 func main() {
-	http.HandleFunc("/", handler) // ハンドラを登録してウェブページを表示させる
+	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
 }

@@ -1,15 +1,15 @@
 package main
 
 import (
-  "fmt"
-  "net/http"
+	"fmt"
+	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "<b>Hello, World</b>")
+	fmt.Fprintf(w, "<b>Hello, World</b>")
 }
 
 func main() {
-  http.HandleFunc("/", handler) // ハンドラを登録してウェブページを表示させる
-  http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", handler) // ハンドラを登録してウェブページを表示させる
+	http.ListenAndServe(":8080", nil)
 }

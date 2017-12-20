@@ -2,6 +2,12 @@
 GolangによるHTTPリクエストヘッダの確認
 
 
+## サーバ起動
+
+```sh
+$ make run
+```
+
 ## GET
 
 ```sh
